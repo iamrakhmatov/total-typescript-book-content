@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+import Content from "@layouts/Content.astro";
+import getSortedContent from "@utils/getSortedContent";
+
+const chapters = await getCollection("blog");
+
+const sortedChapters = getSortedContent(chapters);
+---
+
+<Content chapters={sortedChapters} />
+@utils/getSortedContent
