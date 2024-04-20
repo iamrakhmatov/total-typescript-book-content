@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+import Content from "@layouts/Chapters.astro";
+import getSortedChapters from "@utils/getSortedChapters";
+
+const chapters = await getCollection("total-typescript-book");
+
+const sortedChapters = getSortedChapters(chapters);
+---
+
+<Content chapters={sortedChapters} />
+@utils/getSortedContent @utils/getSortedChapters

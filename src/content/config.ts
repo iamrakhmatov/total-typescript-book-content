@@ -1,11 +1,12 @@
 import { SITE } from "@config";
 import { defineCollection, z } from "astro:content";
 
-const blog = defineCollection({
+const totolTypeScriptBook = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
-      author: z.string().default(SITE.author),
+      bookAuthor: z.string().default(SITE.bookAuthor),
+      developer: z.string().default(SITE.developer),
       pubDatetime: z.date(),
       modDatetime: z.date().optional().nullable(),
       title: z.string(),
@@ -23,4 +24,4 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+export const collections = { totolTypeScriptBook };

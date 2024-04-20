@@ -1,0 +1,38 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Chapters from "@layouts/Chapters.astro";
+import ChapterDetails from "@layouts/ChapterDetails.astro";
+import getSortedChapters from "@utils/getSortedChapters";
+
+export interface Props {
+  chapter: CollectionEntry<"total-typescript-book">;
+}
+
+export async function getStaticPaths() {
+  const chapters = await getCollection(
+    "total-typescript-book",
+    ({ data }) => !data.draft
+  );
+
+  const chapterResult = chapters.map(chapter => ({
+    params: { slug: chapter.slug },
+    props: { chapter },
+  }));
+
+  return [...chapterResult];
+}
+
+const { chapter } = Astro.props;
+
+const chapters = await getCollection("total-typescript-book");
+
+const sortedChapters = getSortedChapters(chapters);
+---
+
+{
+  chapter ? (
+    <ChapterDetails chapter={chapter} />
+  ) : (
+    <Chapters chapters={sortedChapters} />
+  )
+}

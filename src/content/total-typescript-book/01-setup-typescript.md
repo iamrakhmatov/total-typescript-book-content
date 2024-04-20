@@ -1,5 +1,5 @@
 ---
-author: Sat Naing
+author: Matt Pocock
 pubDatetime: 2022-09-23T04:58:53Z
 modDatetime: 2024-01-15T13:05:56.066Z
 title: How to setup TypeScript
@@ -10,6 +10,7 @@ tags:
   - configuration
   - docs
 description: How to properly setup TypeScript in your project.
+chapterNumber: 1
 ---
 
 # 01. Kickstart Your TypeScript Setup
