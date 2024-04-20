@@ -2,9 +2,10 @@ import type socialIcons from "@assets/socialIcons";
 
 export type Site = {
   website: string;
-  author: string;
+  developer: string;
   desc: string;
   title: string;
+  bookAuthor: string;
   ogImage?: string;
   lightAndDarkMode: boolean;
   postPerPage: number;

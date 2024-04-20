@@ -8,22 +8,22 @@ import Card from "@components/Card";
 import { SITE } from "@config";
 
 export interface Props {
-  chapters: CollectionEntry<"blog">[];
+  chapters: CollectionEntry<"total-typescript-book">[];
 }
 
 const { chapters } = Astro.props;
 ---
 
 <Layout title={`Content | ${SITE.title}`}>
-  <Header activeNav="content" />
+  <Header activeNav="chapters" />
   <Main
-    pageTitle="Book content"
-    pageDesc="All the content of the Total TypeScript book."
+    pageTitle="Chapters"
+    pageDesc="All the chapters of the Total TypeScript book."
   >
     <ul>
       {
         chapters.map(({ data, slug }) => (
-          <Card href={`/content/${slug}/`} frontmatter={data} />
+          <Card href={`/chapters/${slug}/`} frontmatter={data} />
         ))
       }
     </ul>

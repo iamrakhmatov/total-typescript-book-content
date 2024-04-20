@@ -6,14 +6,17 @@ import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import SearchBar from "@components/Search";
-import getSortedContent from "@utils/getSortedContent";
+import getSortedChapters from "@utils/getSortedChapters";
 
 // Retrieve all published articles
-const posts = await getCollection("blog", ({ data }) => !data.draft);
-const sortedPosts = getSortedContent(posts);
+const posts = await getCollection(
+  "total-typescript-book",
+  ({ data }) => !data.draft
+);
+const sortedChapters = getSortedChapters(posts);
 
 // List of items to search in
-const searchList = sortedPosts.map(({ data, slug }) => ({
+const searchList = sortedChapters.map(({ data, slug }) => ({
   title: data.title,
   description: data.description,
   data,
@@ -23,9 +26,8 @@ const searchList = sortedPosts.map(({ data, slug }) => ({
 
 <Layout title={`Search | ${SITE.title}`}>
   <Header activeNav="search" />
-  <Main pageTitle="Search" pageDesc="Search any article ...">
+  <Main pageTitle="Search" pageDesc="Search any chapter ...">
     <SearchBar client:load searchList={searchList} />
   </Main>
   <Footer />
 </Layout>
-@utils/getSortedContent

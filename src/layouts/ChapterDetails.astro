@@ -9,10 +9,10 @@ import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  chapter: CollectionEntry<"total-typescript-book">;
 }
 
-const { post } = Astro.props;
+const { chapter } = Astro.props;
 
 const {
   title,
@@ -23,9 +23,9 @@ const {
   pubDatetime,
   modDatetime,
   tags,
-} = post.data;
+} = chapter.data;
 
-const { Content } = await post.render();
+const { Content } = await chapter.render();
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(

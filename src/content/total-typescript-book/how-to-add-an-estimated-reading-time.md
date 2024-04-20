@@ -1,6 +1,6 @@
 ---
 title: How to add an estimated reading time in AstroPaper
-author: Sat Naing
+author: Matt Pocock
 pubDatetime: 2023-07-21T10:11:06.130Z
 modDatetime: 2024-01-03T14:53:25Z
 slug: how-to-add-estimated-reading-time
@@ -95,7 +95,7 @@ import { slugifyStr } from "./slugify";
 export const getReadingTime = async () => {
   // Get all posts using glob. This is to get the updated frontmatter
   const globPosts = import.meta.glob("../content/blog/*.md") as Promise<
-    CollectionEntry<"blog">["data"][]
+    CollectionEntry<"total-typescript-book">["data"][]
   >;
 
   // Then, set those frontmatter value in a JS Map with key value pair
@@ -114,7 +114,9 @@ export const getReadingTime = async () => {
   return mapFrontmatter;
 };
 
-const getPostsWithRT = async (posts: CollectionEntry<"blog">[]) => {
+const getPostsWithRT = async (
+  posts: CollectionEntry<"total-typescript-book">[]
+) => {
   const mapFrontmatter = await getReadingTime();
   return posts.map(post => {
     post.data.readingTime = mapFrontmatter.get(slugifyStr(post.data.title));
@@ -133,7 +135,7 @@ Step (6) Refactor `getStaticPaths` of `/src/pages/posts/[slug].astro` as the fol
 import getPostsWithRT from "@utils/getPostsWithRT";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"total-typescript-book">;
 }
 
 export async function getStaticPaths() {
@@ -156,7 +158,7 @@ Step (7) Refactor `PostDetails.astro` like this. Now you can access and display 
 // imports
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"total-typescript-book">;
 }
 
 const { post } = Astro.props;
@@ -185,7 +187,9 @@ Step (1) Update `utils/getSortedPosts.ts` as the following
 import type { CollectionEntry } from "astro:content";
 import getPostsWithRT from "./getPostsWithRT";
 
-const getSortedPosts = async (posts: CollectionEntry<"blog">[]) => {
+const getSortedPosts = async (
+  posts: CollectionEntry<"total-typescript-book">[]
+) => {
   // make sure that this func is async
   const postsWithRT = await getPostsWithRT(posts); // add reading time
   return postsWithRT
