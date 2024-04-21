@@ -6,17 +6,17 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
-import Socials from "@components/Socials.astro";
 import getSortedChapters from "@utils/getSortedChapters";
-import { SOCIALS } from "@config";
+import { SOCIALS, AUTHOR } from "@config";
 
-const posts = await getCollection("total-typescript-book");
+const chapters = await getCollection("total-typescript-book");
 
-const sortedPosts = getSortedChapters(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const sortedChapters = getSortedChapters(chapters, "modDatetime");
+const recentUpdates = sortedChapters.slice(0, 3);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
+
+const authorTwitter = AUTHOR.twitter;
 ---
 
 <Layout>
@@ -24,13 +24,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <main id="main-content">
     <section id="hero">
       <h1>Total TypeScript Book</h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="rss-link"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
+      <a target="_blank" href="/rss.xml" aria-label="rss feed" title="RSS Feed">
         <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
           ><path
             d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
@@ -41,6 +35,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <span class="sr-only">RSS Feed</span>
       </a>
 
+      <a class="author" target="_blank" href={authorTwitter}>by Matt Pocock</a>
       <p>
         AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
         blog theme. This theme follows best practices and provides accessibility
@@ -56,49 +51,20 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           README
         </LinkButton> for more info.
       </p>
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
     </section>
 
     <Hr />
 
     {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <Card
-                  href={`/posts/${slug}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          {recentPosts.length > 0 && <Hr />}
-        </>
-      )
-    }
-
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts">
-          <h2>Recent Posts</h2>
+      recentUpdates.length > 0 && (
+        <section id="recent-updates">
+          <h2>Recent Updates</h2>
           <ul>
-            {recentPosts.map(
+            {recentUpdates.map(
               ({ data, slug }, index) =>
                 index < 4 && (
                   <Card
-                    href={`/posts/${slug}/`}
+                    href={`/chapters/${slug}/`}
                     frontmatter={data}
                     secHeading={false}
                   />
@@ -109,8 +75,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
-    <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts/">
+    <div class="all-chapters-btn-wrapper">
+      <LinkButton href="/chapters/">
         Book content
         <svg xmlns="http://www.w3.org/2000/svg"
           ><path
@@ -130,13 +96,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply pb-6 pt-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
+    @apply inline-block text-3xl font-bold sm:text-5xl;
   }
   #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+    @apply mb-1 h-6 w-6 scale-110 fill-skin-accent sm:mb-2 sm:scale-125;
+  }
+  #hero .author {
+    @apply mb-4 mt-1 inline-block text-xs italic opacity-70 hover:text-skin-accent sm:mb-8 sm:text-base;
   }
   #hero p {
     @apply my-2;
@@ -148,17 +114,16 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
   }
 
-  /* ===== Featured & Recent Posts Sections ===== */
+  /* ===== Featured & Recent Updates Sections ===== */
   #featured,
-  #recent-posts {
+  #recent-updates {
     @apply pb-6 pt-12;
   }
   #featured h2,
-  #recent-posts h2 {
+  #recent-updates h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
-  .all-posts-btn-wrapper {
+  .all-chapters-btn-wrapper {
     @apply my-8 text-center;
   }
 </style>
-@utils/getSortedContent @utils/getSortedChapters

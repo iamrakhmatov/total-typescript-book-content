@@ -1,16 +1,18 @@
 ---
 author: Matt Pocock
 pubDatetime: 2023-09-25T10:25:54.547Z
-title: AstroPaper 3.0
-slug: astro-paper-v3
-featured: false
+title: Essential Types and Annotations
+slug: chapter-4-essential-types-and-annotations
+
 ogImage: https://github.com/satnaing/astro-paper/assets/53733092/1ef0cf03-8137-4d67-ac81-84a032119e3a
 tags:
-  - release
+  - types
+  - annotations
 description: "AstroPaper Version 3: Elevating Your Web Experience with Astro v3 and Seamless View Transitions"
+chapterNumber: 4
 ---
 
-# 04. Essential Types and Annotations
+# Essential Types and Annotations
 
 Now we've covered most of the why of TypeScript, it's time to start with the how. We'll cover key concepts like type annotations and type inference, as well as how to start writing type-safe functions.
 

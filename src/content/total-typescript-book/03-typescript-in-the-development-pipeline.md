@@ -1,16 +1,18 @@
 ---
 author: Matt Pocock
 pubDatetime: 2023-01-30T15:57:52.737Z
-title: AstroPaper 2.0
-slug: astro-paper-2
-featured: false
+title: TypeScript In The Development Pipeline
+slug: chapter-3-typescript-in-the-development-pipeline
+
 ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
 tags:
-  - release
+  - development
+  - pipeline
 description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+chapterNumber: 3
 ---
 
-# 03. TypeScript In The Development Pipeline
+# TypeScript In The Development Pipeline
 
 We've explored the relationship between JavaScript and TypeScript, and also how TypeScript improves your life as a developer. But let's go a bit deeper. In this chapter we'll get the TypeScript CLI up and running, and see how it fits into the development pipeline.
 

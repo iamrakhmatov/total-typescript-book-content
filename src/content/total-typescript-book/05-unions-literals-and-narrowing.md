@@ -1,16 +1,18 @@
 ---
 author: Matt Pocock
 pubDatetime: 2024-01-04T09:30:41.816Z
-title: AstroPaper 4.0
-slug: "astro-paper-v4"
+title: Unions, Literals and Narrowing
+slug: chapter-5-unions-literals-and-narrowing
 featured: true
 ogImage: ../../assets/images/AstroPaper-v4.png
 tags:
-  - release
+  - unions
+  - literals
 description: "AstroPaper v4: ensuring a smoother and more feature-rich blogging experience."
+chapterNumber: 5
 ---
 
-# 05. Unions, Literals and Narrowing
+# Unions, Literals and Narrowing
 
 In this section, we're going to see how TypeScript can help when a value is one of many possible types. We'll first look at declaring those types using union types, then we'll see how TypeScript can narrow down the type of a value based on your runtime code.
 
