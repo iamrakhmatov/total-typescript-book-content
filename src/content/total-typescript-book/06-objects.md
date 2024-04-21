@@ -1,18 +1,19 @@
 ---
 author: Matt Pocock
 pubDatetime: 2022-09-25T15:20:35Z
-title: Customizing AstroPaper theme color schemes
-featured: false
+title: Objects
+slug: chapter-6-objects
+
 draft: false
 tags:
-  - color-schemes
-  - docs
+  - objects
 description:
   How you can enable/disable light & dark mode; and customize color schemes
   of AstroPaper theme.
+chapterNumber: 6
 ---
 
-# 06. Objects
+# Objects
 
 So far, we've looked at object types only in the context of 'object literals', defined using `{}` with type aliases.
 

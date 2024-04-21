@@ -3,7 +3,7 @@ author: Matt Pocock
 pubDatetime: 2022-09-23T04:58:53Z
 modDatetime: 2024-01-15T13:05:56.066Z
 title: How to setup TypeScript
-slug: how-to-setup-typescript
+slug: chapter-1-how-to-setup-typescript
 featured: true
 draft: false
 tags:
@@ -13,7 +13,7 @@ description: How to properly setup TypeScript in your project.
 chapterNumber: 1
 ---
 
-# 01. Kickstart Your TypeScript Setup
+# Kickstart Your TypeScript Setup
 
 Before diving into TypeScript, let's take a moment to talk about its foundation — JavaScript.
 

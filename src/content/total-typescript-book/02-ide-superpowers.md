@@ -3,16 +3,16 @@ author: Matt Pocock
 pubDatetime: 2022-09-23T15:22:00Z
 modDatetime: 2023-12-21T09:12:47.400Z
 title: IDE Superpowers
-slug: ide-superpowers
+slug: chapter-2-ide-superpowers
 featured: true
 draft: false
 tags:
-  - docs
+  - vscode
 description: Superpowers of Integrated Development Environment for using TypeScript.
 chapterNumber: 2
 ---
 
-# 02. IDE Superpowers
+# IDE Superpowers
 
 TypeScript works the same no matter what IDE you use, but for this book we'll assume you're using Visual Studio Code (VS Code).
 

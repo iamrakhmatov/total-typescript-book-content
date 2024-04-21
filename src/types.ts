@@ -5,7 +5,6 @@ export type Site = {
   developer: string;
   desc: string;
   title: string;
-  bookAuthor: string;
   ogImage?: string;
   lightAndDarkMode: boolean;
   postPerPage: number;

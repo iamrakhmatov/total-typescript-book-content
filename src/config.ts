@@ -3,13 +3,17 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
   developer: "Cruz Rakhmatov",
-  bookAuthor: "Matt Pocock",
   desc: "A minimal website for Total TypeScript book by Matt Pocock.",
   title: "Total TypeScript Book by Matt Pocock",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+};
+
+export const AUTHOR = {
+  name: "Matt Pocock",
+  twitter: "https://twitter.com/mattpocockuk",
 };
 
 export const LOCALE = {
@@ -40,7 +44,7 @@ export const SOCIALS: SocialObjects = [
   {
     name: "Mail",
     href: "team@totaltypescript.com",
-    linkTitle: `Send an email to ${SITE.bookAuthor}`,
+    linkTitle: `Send an email to ${AUTHOR.name}`,
     active: false,
   },
   {
@@ -52,13 +56,13 @@ export const SOCIALS: SocialObjects = [
   {
     name: "YouTube",
     href: "https://www.youtube.com/@mattpocockuk",
-    linkTitle: `${SITE.bookAuthor} on YouTube`,
+    linkTitle: `${AUTHOR.name} on YouTube`,
     active: false,
   },
   {
     name: "Discord",
     href: "https://discord.com/channels/997886693233393714/997888903707107358",
-    linkTitle: `${SITE.bookAuthor} on Discord`,
+    linkTitle: `${AUTHOR.name} on Discord`,
     active: false,
   },
 ];
