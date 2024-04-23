@@ -1,7 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2023-07-21T10:11:06.130Z
-modDatetime: 2024-01-03T14:53:25Z
+pubDatetime: 2024-03-20
+modDatetime: 2024-03-20
 title: Deriving Types
 slug: chapter-10-deriving-types
 

@@ -1,6 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2023-01-30T15:57:52.737Z
+pubDatetime: 2024-02-26
+modDatetime: 2024-02-26
 title: TypeScript In The Development Pipeline
 slug: chapter-3-typescript-in-the-development-pipeline
 

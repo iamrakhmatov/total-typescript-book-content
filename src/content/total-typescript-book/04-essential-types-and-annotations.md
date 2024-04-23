@@ -1,6 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2023-09-25T10:25:54.547Z
+pubDatetime: 2024-04-09
+modDatetime: 2024-04-09
 title: Essential Types and Annotations
 slug: chapter-4-essential-types-and-annotations
 

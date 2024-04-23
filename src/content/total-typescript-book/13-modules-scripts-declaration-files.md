@@ -1,6 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2023-07-20T15:33:05.569Z
+pubDatetime: 2024-04-04
+modDatetime: 2024-04-04
 title: Modules, Scripts, and Declaration Files
 slug: chapter-13-modules-scripts-and-declaration-files
 

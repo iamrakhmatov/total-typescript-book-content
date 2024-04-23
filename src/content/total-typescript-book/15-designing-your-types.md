@@ -1,7 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2022-09-26T12:13:24Z
-modDatetime: 2024-01-04T09:09:06Z
+pubDatetime: 2024-04-11
+modDatetime: 2024-04-11
 title: Designing Your Types in TypeScript
 slug: chapter-15-designing-your-types-in-typeScript
 

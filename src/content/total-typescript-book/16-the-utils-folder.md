@@ -1,7 +1,7 @@
 ---
 author: Simon Smale
-pubDatetime: 2024-01-03T20:40:08Z
-modDatetime: 2024-01-08T18:59:05Z
+pubDatetime: 2024-04-15
+modDatetime: 2024-04-15
 title: The utils Folder
 slug: chapter-16-the-utils-folder
 

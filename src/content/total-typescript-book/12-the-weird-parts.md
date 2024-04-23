@@ -1,6 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2022-09-21T05:17:19Z
+pubDatetime: 2024-03-29
+modDatetime: 2024-03-29
 title: The Weird Parts
 slug: chapter-12-the-weird-parts
 

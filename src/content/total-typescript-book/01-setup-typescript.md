@@ -1,7 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2022-09-23T04:58:53Z
-modDatetime: 2024-01-15T13:05:56.066Z
+pubDatetime: 2024-02-19
+modDatetime: 2024-02-19
 title: How to setup TypeScript
 slug: chapter-1-how-to-setup-typescript
 featured: true
