@@ -1,6 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2022-06-06T04:06:31Z
+pubDatetime: 2024-03-04
+modDatetime: 2024-03-04
 title: Classes
 slug: chapter-8-classes
 

@@ -1,6 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2022-09-25T15:20:35Z
+pubDatetime: 2024-04-11
+modDatetime: 2024-04-11
 title: Objects
 slug: chapter-6-objects
 

@@ -1,6 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2024-01-04T09:30:41.816Z
+pubDatetime: 2024-03-12
+modDatetime: 2024-03-12
 title: Unions, Literals and Narrowing
 slug: chapter-5-unions-literals-and-narrowing
 featured: true

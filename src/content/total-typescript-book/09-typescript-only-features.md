@@ -1,7 +1,7 @@
 ---
 author: Simon Smale
-pubDatetime: 2024-01-08T18:16:00.000Z
-modDatetime:
+pubDatetime: 2024-03-08
+modDatetime: 2024-03-08
 title: TypeScript-only Features
 slug: chapter-09-typeScript-only-features
 

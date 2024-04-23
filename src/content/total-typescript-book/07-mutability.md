@@ -1,6 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2022-12-28T04:59:04.866Z
+pubDatetime: 2024-02-26
+modDatetime: 2024-02-26
 title: Mutability
 slug: chapter-7-mutability
 

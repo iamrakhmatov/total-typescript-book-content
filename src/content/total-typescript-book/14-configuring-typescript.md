@@ -1,6 +1,7 @@
 ---
 author: Matt Pocock
-pubDatetime: 2022-03-25T16:55:12.000+00:00
+pubDatetime: 2024-04-09
+modDatetime: 2024-04-09
 title: Configuring TypeScript
 slug: chapter-14-configuring-typescript
 
